@@ -19,6 +19,9 @@ class Book(models.Model):
 
 
     class Meta:
+        indexes = [
+            models.Index(fields=['id'], name='id_index'),
+        ]
         permissions = [
             ('special_status', 'Can read all books'),
         ]
